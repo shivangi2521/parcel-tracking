@@ -6,7 +6,7 @@
 
     ```bash
     git clone https://github.com/shivangi2521/parcel-tracking.git
-    cd tracking_api
+    cd parcel-tracking
     ```
 
 2. Install dependencies:
