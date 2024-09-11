@@ -9,9 +9,16 @@ from django.core.exceptions import ValidationError
 
 
 class TrackingNumberView(APIView):
+    """
+    API view for creating a new TrackingNumber object.
+    """
+
     def get(self, request):
+        """
+        Handle GET requests to create a new TrackingNumber.
+        """
         try:
-            # Validate UUID for customer_id
+            # Validate and parse the customer_id as a UUID
             customer_id = request.GET.get("customer_id")
             if customer_id:
                 try:
@@ -35,7 +42,7 @@ class TrackingNumberView(APIView):
                 customer_slug=request.GET.get("customer_slug", ""),  # Optional
             )
 
-            # Serialize the tracking number object
+            # Serialize the TrackingNumber object
             serializer = TrackingNumberSerializer(tracking_number)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
