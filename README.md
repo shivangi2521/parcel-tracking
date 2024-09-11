@@ -8,20 +8,28 @@
     git clone https://github.com/shivangi2521/parcel-tracking.git
     cd parcel-tracking
     ```
+  
+2. Create and Activate a Virtual Environment (Linux):
+   
+    ```bash
+    python3 -m venv env
+    source env/bin/activate
+    ```
 
-2. Install dependencies:
+
+3. Install dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Apply migrations:
+4. Apply migrations:
 
     ```bash
     python manage.py migrate
     ```
 
-4. Run the server:
+5. Run the server:
 
     ```bash
     python manage.py runserver
